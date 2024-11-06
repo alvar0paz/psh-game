@@ -1,7 +1,9 @@
-export const exportToCSV = (data: any[], filename: string) => {
+import { PlayerStat } from "../pages/ReportPage";
+
+export const exportToCSV = (data: PlayerStat[], filename: string) => {
   const csvContent = [
-    Object.keys(data[0]).join(','), // Headers
-    ...data.map(row => Object.values(row).join(',')) // Rows
+    Object.keys(data[0]).join(','),
+    ...data.map(row => Object.values(row).join(','))
   ].join('\n');
 
   const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });

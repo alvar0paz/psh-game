@@ -4,7 +4,7 @@ import TopScoresTable from '../components/TopScoresTable';
 import { exportToCSV } from '../utils/exportToCSV';
 import './ReportPage.css';
 
-interface PlayerStat {
+export interface PlayerStat {
   id: number;
   playerId: string;
   nickname: string;
