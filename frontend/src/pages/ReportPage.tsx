@@ -20,7 +20,6 @@ const ReportPage: React.FC = () => {
   const fetchStats = async () => {
     try {
       const response = await axios.get('http://localhost:3000/api/stats/top-scores');
-      console.log(response)
       setTopScores(response.data.scores);
       setLastGenerated(response.data.lastGenerated);
     } catch (error) {
